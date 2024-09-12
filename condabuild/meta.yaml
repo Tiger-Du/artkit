@@ -40,6 +40,7 @@ test:
     - transformers {{ environ.get('ARTKIT_V_TRANSFORMERS', '') }}
     - boto3 {{ environ.get('ARTKIT_V_BOTO3', '') }}
     - moto {{ environ.get('ARTKIT_V_MOTO', '') }}
+    - google-cloud-aiplatform {{ environ.get('ARTKIT_V_GOOGLE_CLOUD_AIPLATFORM', '') }}
   commands:
     - conda list
     - python -c "import artkit; import os; assert artkit.__version__ == os.environ['ARTKIT_BUILD_ARTKIT_VERSION']"
@@ -55,4 +56,4 @@ about:
     libraries.
   dev_url: https://github.com/BCG-X-Official/artkit
   doc_url: https://bcg-x-official.github.io/artkit/
-  doc_source_url: https://github.com/BCG-X-Official/artkit/blob/develop/README.rst
+  doc_source_url: https://github.com/BCG-X-Official/artkit/tree/1.0.x/sphinx/source
